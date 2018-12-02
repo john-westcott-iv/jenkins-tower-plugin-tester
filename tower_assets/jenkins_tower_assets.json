@@ -117,7 +117,7 @@
     "ask_skip_tags_on_launch": true, 
     "asset_type": "job_template", 
     "survey_enabled": true, 
-    "playbook": "simple.yml"
+    "playbook": "playbooks/simple.yml"
   }, 
   {
     "credential": "Jenkins Machine", 
@@ -153,7 +153,7 @@
     "project": "Jenkins Project", 
     "inventory": "Jenkins Inventory", 
     "asset_type": "job_template", 
-    "playbook": "fail_playbook.yml"
+    "playbook": "playbooks/fail_playbook.yml"
   }, 
   {
     "credential": "Jenkins Machine", 
@@ -188,7 +188,7 @@
     "project": "Jenkins Project", 
     "inventory": "Jenkins Inventory", 
     "asset_type": "job_template", 
-    "playbook": "export_values.yml"
+    "playbook": "playbooks/export_values.yml"
   }, 
   {
     "name": "Jenkins Multi Cred", 
@@ -223,7 +223,7 @@
     "project": "Jenkins Project", 
     "inventory": "Jenkins Inventory", 
     "asset_type": "job_template", 
-    "playbook": "multi_cred.yml"
+    "playbook": "playbooks/multi_cred.yml"
   }, 
   {
     "credential": "Jenkins Machine", 
@@ -259,7 +259,7 @@
     "inventory": "Jenkins Inventory", 
     "ask_skip_tags_on_launch": true, 
     "asset_type": "job_template", 
-    "playbook": "skip_tags.yml"
+    "playbook": "playbooks/skip_tags.yml"
   }, 
   {
     "credential": "Jenkins Machine", 
@@ -294,7 +294,7 @@
     "project": "Jenkins Project", 
     "inventory": "Jenkins Inventory", 
     "asset_type": "job_template", 
-    "playbook": "export_values.yml"
+    "playbook": "playbooks/export_values.yml"
   }, 
   {
     "credential": "Jenkins Machine", 
@@ -359,7 +359,7 @@
     "inventory": "Jenkins Inventory", 
     "asset_type": "job_template", 
     "survey_enabled": true, 
-    "playbook": "simple.yml"
+    "playbook": "playbooks/simple.yml"
   }, 
   {
     "organization": "Default", 
