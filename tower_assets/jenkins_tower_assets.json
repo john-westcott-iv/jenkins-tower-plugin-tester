@@ -362,7 +362,7 @@
     "playbook": "playbooks/simple.yml"
   }, 
   {
-    "organization": "Default", 
+    "organization": "Jenkins", 
     "asset_relation": {
       "labels": [], 
       "workflow_nodes": [
