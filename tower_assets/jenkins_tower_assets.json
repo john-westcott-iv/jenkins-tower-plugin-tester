@@ -1,0 +1,555 @@
+[
+  {
+    "inputs": {
+      "username": "root", 
+      "password": ""
+    }, 
+    "name": "Jenkins Machine", 
+    "asset_type": "credential", 
+    "credential_type": "Machine", 
+    "organization": "Jenkins", 
+    "asset_relation": {
+      "roles": [
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Use", 
+          "user": []
+        }
+      ]
+    }
+  }, 
+  {
+    "inputs": {
+      "vault_password": ""
+    }, 
+    "name": "Jenkins Vault", 
+    "asset_type": "credential", 
+    "credential_type": "Vault", 
+    "organization": "Jenkins", 
+    "asset_relation": {
+      "roles": [
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Use", 
+          "user": []
+        }
+      ]
+    }
+  }, 
+  {
+    "credential": "Jenkins Machine", 
+    "name": "Jenkins Simple Test", 
+    "ask_tags_on_launch": true, 
+    "ask_job_type_on_launch": true, 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [
+            "Jenkins Team"
+          ], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin", 
+            "jenkins_user"
+          ]
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {
+        "spec": [
+          {
+            "question_description": "", 
+            "min": 0, 
+            "default": "", 
+            "max": 1024, 
+            "required": true, 
+            "choices": "", 
+            "new_question": true, 
+            "variable": "my_var", 
+            "question_name": "Enter var to display", 
+            "type": "text"
+          }
+        ], 
+        "name": "", 
+        "description": ""
+      }
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "ask_skip_tags_on_launch": true, 
+    "asset_type": "job_template", 
+    "survey_enabled": true, 
+    "playbook": "simple.yml"
+  }, 
+  {
+    "credential": "Jenkins Machine", 
+    "name": "Jenkins Failed Test", 
+    "use_fact_cache": true, 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {}
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "asset_type": "job_template", 
+    "playbook": "fail_playbook.yml"
+  }, 
+  {
+    "credential": "Jenkins Machine", 
+    "name": "Jenkins Export Vars", 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {}
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "asset_type": "job_template", 
+    "playbook": "export_values.yml"
+  }, 
+  {
+    "name": "Jenkins Multi Cred", 
+    "ask_credential_on_launch": true, 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {}
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "asset_type": "job_template", 
+    "playbook": "multi_cred.yml"
+  }, 
+  {
+    "credential": "Jenkins Machine", 
+    "name": "Jenkins Skip Tags", 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {}
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "ask_skip_tags_on_launch": true, 
+    "asset_type": "job_template", 
+    "playbook": "skip_tags.yml"
+  }, 
+  {
+    "credential": "Jenkins Machine", 
+    "name": "Jenkins Export Vars", 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {}
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "asset_type": "job_template", 
+    "playbook": "export_values.yml"
+  }, 
+  {
+    "credential": "Jenkins Machine", 
+    "name": "Jenkins Simple Test 2", 
+    "asset_relation": {
+      "extra_credentials": [], 
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "admin"
+          ]
+        }, 
+        {
+          "team": [], 
+          "name": "Execute", 
+          "user": []
+        }
+      ], 
+      "labels": [], 
+      "schedules": [], 
+      "survey_spec": {
+        "spec": [
+          {
+            "required": true, 
+            "min": 0, 
+            "default": "", 
+            "max": 1024, 
+            "question_description": "", 
+            "choices": "", 
+            "new_question": true, 
+            "variable": "my_var", 
+            "question_name": "Enter var to display", 
+            "type": "text"
+          }, 
+          {
+            "question_description": "", 
+            "min": 0, 
+            "default": "", 
+            "max": 1024, 
+            "required": true, 
+            "choices": "", 
+            "new_question": true, 
+            "variable": "another_question", 
+            "question_name": "Another question", 
+            "type": "text"
+          }
+        ], 
+        "name": "", 
+        "description": ""
+      }
+    }, 
+    "project": "Jenkins Project", 
+    "inventory": "Jenkins Inventory", 
+    "asset_type": "job_template", 
+    "survey_enabled": true, 
+    "playbook": "simple.yml"
+  }, 
+  {
+    "organization": "Default", 
+    "asset_relation": {
+      "labels": [], 
+      "workflow_nodes": [
+        {
+          "name": "node0", 
+          "unified_job_type": "job", 
+          "success_nodes": [
+            "node1"
+          ], 
+          "failure_nodes": [], 
+          "unified_job_name": "Jenkins Simple Test", 
+          "always_nodes": []
+        }, 
+        {
+          "name": "node1", 
+          "unified_job_type": "job", 
+          "success_nodes": [], 
+          "failure_nodes": [], 
+          "unified_job_name": "Jenkins Simple Test 2", 
+          "always_nodes": []
+        }, 
+        {
+          "name": "node2", 
+          "unified_job_type": "project_update", 
+          "success_nodes": [], 
+          "failure_nodes": [
+            "node3"
+          ], 
+          "unified_job_name": "Jenkins Project", 
+          "always_nodes": []
+        }, 
+        {
+          "name": "node3", 
+          "unified_job_type": "project_update", 
+          "success_nodes": [], 
+          "failure_nodes": [], 
+          "unified_job_name": "Jenkins Project", 
+          "always_nodes": []
+        }
+      ], 
+      "roles": [
+        {
+          "team": [
+            "Jenkins Team"
+          ], 
+          "name": "Execute", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": [
+            "another_user"
+          ]
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }
+      ], 
+      "survey_spec": {}
+    }, 
+    "asset_type": "workflow", 
+    "name": "Jenkins Workflow"
+  }, 
+  {
+    "name": "Jenkins Project", 
+    "scm_url": "https://github.com/john-westcott-iv/jenkins-tower-plugin-tester.git", 
+    "asset_relation": {
+      "notification_templates_error": [], 
+      "notification_templates_success": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Use", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Update", 
+          "user": []
+        }
+      ], 
+      "schedules": []
+    }, 
+    "scm_type": "git", 
+    "organization": "Jenkins", 
+    "asset_type": "project"
+  },
+  {
+    "username": "jenkins_user", 
+    "first_name": "Jenkins", 
+    "last_name": "User", 
+    "asset_type": "user", 
+    "email": "john.westcott.iv@redhat.com"
+  },
+  {
+    "username": "another_user", 
+    "first_name": "Another", 
+    "last_name": "User", 
+    "asset_type": "user", 
+    "email": "john.westcott.iv@redhat.com"
+  }, 
+  {
+    "organization": "Jenkins", 
+    "asset_type": "team", 
+    "name": "Jenkins Team"
+  }, 
+  {
+    "asset_relation": {
+      "roles": [
+        {
+          "team": [], 
+          "name": "Member", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Auditor", 
+          "user": []
+        }
+      ]
+    }, 
+    "asset_type": "organization", 
+    "name": "Jenkins"
+  }, 
+  {
+    "organization": "Jenkins", 
+    "variables": "---", 
+    "asset_relation": {
+      "inventory_source": [], 
+      "host": [
+        {
+          "name": "192.168.56.102"
+        }
+      ], 
+      "group": [], 
+      "roles": [
+        {
+          "team": [], 
+          "name": "Ad Hoc", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Admin", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Read", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Use", 
+          "user": []
+        }, 
+        {
+          "team": [], 
+          "name": "Update", 
+          "user": []
+        }
+      ]
+    }, 
+    "asset_type": "inventory", 
+    "name": "Jenkins Inventory"
+  }
+]
