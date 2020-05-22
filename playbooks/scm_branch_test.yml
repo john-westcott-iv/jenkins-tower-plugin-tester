@@ -1,0 +1,8 @@
+---
+- name: Test SCM branch
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - debug:
+        msg: "This is not what you want to see"
